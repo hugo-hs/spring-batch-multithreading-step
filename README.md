@@ -10,6 +10,12 @@ queueCapacity: Tamanho da fila que armazena as threads
 
 maxPoolSize: Número de threads que poderão execeder a capacidade da fila de threads
 
+### Passo a passo
+
+1. Criar uma implementação do TaskExecutor (TaskExecutorConfig.java)
+2. Utilizar esse taskExecutor no step do job (MigrarDadosBancariosStepConfig e MigrarPessoaStepConfig)
+3. Desabilitar o salvamento de estado no componente de leitura do step multithread (ArquivoDadosBancariosReaderConfig.java e ArquivoPessoaReaderConfig.java)
+4. Fechar o contexto de aplicação do Spring encerrando assim o job quando a sua execução finalizar (MultithreadingStepApplication.java)
 
 ## Pré-requisitos execução
 
