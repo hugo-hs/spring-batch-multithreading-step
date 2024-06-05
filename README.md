@@ -4,8 +4,10 @@
 * Indicado quando o gargalo são as operações de leitura e escrita (I/O)
 * O estado dos componentes não deve ser salvo pois não será possível restartar corretamente o job em casos de falha
 
-corePoolSize: Número de threads criadas para atender as requisições de processamento,
+corePoolSize: Número de threads criadas para atender as requisições de processamento
+
 queueCapacity: Tamanho da fila que armazena as threads
+
 maxPoolSize: Número de threads que poderão execeder a capacidade da fila de threads
 
 
