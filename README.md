@@ -30,7 +30,7 @@ E então criar o conteiner da imagem
 ### Acessando o conteiner e MySql do conteiner
 
 Para acessar o conteiner criado anteoriormente
-> docker exec -it mysql_processamento_assincrono bash -l
+> docker exec -it mysql_spring_batch bash -l
 
 **mysql_processamento_assincrono** corresponde ao nome do conteiner que pode ser consultado com o comando:
 > docker-compose ps
