@@ -1,0 +1,16 @@
+version: '3.1'
+
+services:
+  mysql_processamento_assincrono:
+    container_name: mysql_processamento_assincrono
+    image: mysql
+    restart: always
+    environment:
+#        MYSQL_DATABASE: migracao_dados
+        MYSQL_USER: user
+        MYSQL_PASSWORD: 123456
+        MYSQL_ALLOW_EMPTY_PASSWORD: false
+    ports:
+      - "3306:3306"
+    volumes:
+      - "./files/scripts.sql:/docker-entrypoint-initdb.d/1.sql"
